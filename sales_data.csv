@@ -1,0 +1,26 @@
+Date,Product,Region,Amount,Quantity,Salesperson
+2024-01-15,Laptop,North,1299.99,1,Alice Johnson
+2024-01-16,Mouse,South,29.99,3,Bob Smith
+2024-01-16,Keyboard,East,89.99,2,Carol Davis
+2024-01-17,Monitor,West,399.99,1,David Lee
+2024-01-17,Laptop,South,1299.99,2,Bob Smith
+2024-01-18,Mouse,North,29.99,5,Alice Johnson
+2024-01-18,Laptop,East,1299.99,1,Carol Davis
+2024-01-19,Keyboard,West,89.99,4,David Lee
+2024-01-19,Monitor,North,399.99,2,Alice Johnson
+2024-01-20,Laptop,South,1299.99,1,Bob Smith
+2024-01-21,Mouse,East,29.99,2,Carol Davis
+2024-01-21,Keyboard,North,89.99,3,Alice Johnson
+2024-01-22,Monitor,West,399.99,1,David Lee
+2024-01-22,Laptop,East,1299.99,2,Carol Davis
+2024-01-23,Mouse,South,29.99,4,Bob Smith
+2024-01-23,Keyboard,West,89.99,1,David Lee
+2024-01-24,Monitor,North,399.99,3,Alice Johnson
+2024-01-24,Laptop,South,1299.99,1,Bob Smith
+2024-01-25,Mouse,East,29.99,2,Carol Davis
+2024-01-25,Keyboard,North,89.99,5,Alice Johnson
+2024-01-26,Monitor,West,399.99,2,David Lee
+2024-01-26,Laptop,East,1299.99,1,Carol Davis
+2024-01-27,Mouse,South,29.99,3,Bob Smith
+2024-01-28,Keyboard,West,89.99,2,David Lee
+2024-01-28,Monitor,North,399.99,1,Alice Johnson

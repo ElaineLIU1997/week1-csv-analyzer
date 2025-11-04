@@ -1,7 +1,6 @@
 # Week 1 CSV Analyzer
 
 A Python-based CSV data analyzer designed to process and analyze sales data from CSV files.
-Tools: Claude, Claude Code, Cursor
 
 ## What It Does
 

@@ -1,20 +1,36 @@
-# Week 1 CSV Analyzer
+# Week 1 CSV Analyzer - Enhanced Edition
 
-A Python-based CSV data analyzer designed to process and analyze sales data from CSV files.
+A comprehensive Python-based data analyzer with advanced visualizations, forecasting capabilities, and multiple export formats.
 
 ## What It Does
 
-This tool reads CSV files containing sales data and provides:
+This enhanced tool provides powerful sales data analysis with:
 
+### Core Analysis Features
 - **Dataset Overview**: Total records and column information
 - **Sample Data Display**: Shows the first few rows of your data
-- **Statistical Summary**: Basic statistics for numerical columns
+- **Statistical Summary**: Comprehensive statistics for all numerical columns
 - **Sales Analysis**:
   - Total sales amount
   - Average sale value
   - Highest and lowest sales
-- **Product Analysis**: Sales breakdown by product category
+  - Growth rate calculations
+- **Product Analysis**: Detailed sales breakdown by product category
 - **Regional Analysis**: Sales breakdown by geographic region
+
+### NEW: Advanced Features
+- **Data Visualizations**: 5 types of professional charts
+  - Sales by Product (Bar Chart)
+  - Sales by Region (Pie Chart)
+  - Sales Trend Over Time (Line Chart)
+  - Quantity Distribution (Box Plot)
+  - Product vs Region Heatmap
+- **Time-Series Analysis**: Trend analysis with daily/weekly aggregations
+- **Sales Forecasting**: 7-day forecast using moving averages
+- **Multiple File Formats**: Support for CSV, Excel (.xlsx, .xls), and JSON
+- **Export Capabilities**:
+  - PDF reports with visualizations
+  - Excel workbooks with multiple analysis sheets
 
 ## Project Structure
 
@@ -29,22 +45,63 @@ week1-csv-analyzer/
 ## Requirements
 
 - Python 3.7 or higher
-- pandas library
+- pandas >= 2.0.0
+- matplotlib >= 3.7.0
+- seaborn >= 0.12.0
+- openpyxl >= 3.1.0
 
 ## Installation
 
 1. Install dependencies:
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Usage
 
-Run the analyzer with a CSV file:
+### Basic Usage
+
+Run the analyzer with any supported file format:
 
 ```bash
-python analyzer.py sales_data.csv
+# Basic analysis (CSV, Excel, or JSON)
+python3 analyzer.py sales_data.csv
+python3 analyzer.py sales_data.xlsx
+python3 analyzer.py sales_data.json
 ```
+
+### Advanced Usage
+
+Use command-line options to enable advanced features:
+
+```bash
+# Generate visualizations
+python3 analyzer.py sales_data.csv --visualize
+
+# Export to Excel
+python3 analyzer.py sales_data.csv --export-excel
+
+# Export to PDF
+python3 analyzer.py sales_data.csv --export-pdf
+
+# Perform sales forecasting
+python3 analyzer.py sales_data.csv --forecast
+
+# Enable ALL features at once
+python3 analyzer.py sales_data.csv --all
+
+# Custom output directory
+python3 analyzer.py sales_data.csv --all --output-dir my_reports
+```
+
+### Command-Line Options
+
+- `--visualize`: Generate PNG visualizations (saved to output directory)
+- `--export-excel`: Export analysis to Excel workbook with multiple sheets
+- `--export-pdf`: Export visualizations to PDF report
+- `--forecast`: Perform 7-day sales forecasting
+- `--all`: Enable all features (visualizations, exports, forecasting)
+- `--output-dir DIR`: Specify custom output directory (default: `output/`)
 
 ### Expected CSV Format
 
@@ -99,21 +156,72 @@ The included `sales_data.csv` file contains 25 sample sales records from January
 - 4 salespeople
 - Various quantities and amounts
 
+## Output Files
+
+When using advanced features, the analyzer creates an `output/` directory (or custom directory) containing:
+
+- **Visualizations** (when `--visualize` is used):
+  - `sales_by_product.png` - Bar chart of product sales
+  - `sales_by_region.png` - Pie chart of regional distribution
+  - `sales_trend.png` - Time series line chart
+  - `quantity_distribution.png` - Box plot of quantities
+  - `sales_heatmap.png` - Product vs Region heatmap
+
+- **Excel Report** (when `--export-excel` is used):
+  - `analysis_report.xlsx` with sheets:
+    - Raw Data
+    - Summary Statistics
+    - Product Analysis
+    - Region Analysis
+
+- **PDF Report** (when `--export-pdf` is used):
+  - `analysis_report.pdf` with visualization pages
+
 ## Learning Objectives
 
 This project demonstrates:
-- Reading and processing CSV files with pandas
-- Performing data analysis and aggregation
-- Grouping and summarizing data
-- Error handling in Python
-- Command-line argument processing
-- Data visualization in text format
 
-## Next Steps
+### Core Skills
+- Reading and processing multiple file formats (CSV, Excel, JSON)
+- Performing comprehensive data analysis and aggregation
+- Grouping and summarizing data with pandas
+- Error handling and exception management
+- Command-line argument processing with argparse
 
-Potential enhancements:
-- Add data visualization with matplotlib
-- Export analysis results to PDF or Excel
-- Support for multiple file formats
-- Interactive mode for exploring data
-- Time-series analysis for date-based trends
+### Advanced Skills (Day 2 Enhancements)
+- **Data Visualization**: Creating professional charts with matplotlib and seaborn
+- **Time-Series Analysis**: Analyzing trends over time
+- **Forecasting**: Simple predictive modeling with moving averages
+- **Export Functionality**: Generating PDF and Excel reports
+- **Code Organization**: Modular function design for complex features
+
+## Version History
+
+### Version 2.0 (Day 2 - Enhanced)
+- Added 5 types of data visualizations
+- Implemented time-series analysis with trend calculations
+- Added sales forecasting using moving averages
+- Added support for Excel and JSON input files
+- Added PDF export functionality
+- Added Excel export with multiple sheets
+- Enhanced command-line interface with argparse
+- Improved error handling and user feedback
+
+### Version 1.0 (Day 1 - Basic)
+- Basic CSV analysis
+- Console output only
+- Product and region analysis
+- Statistical summaries
+
+## Future Enhancements
+
+Additional ideas for further development:
+- Interactive dashboard with Streamlit or Dash
+- Advanced forecasting models (ARIMA, Prophet)
+- Database integration (PostgreSQL, SQLite)
+- RESTful API for data access
+- Real-time data streaming support
+- Machine learning for anomaly detection
+- Email report delivery
+- Multi-currency support
+- Automated report scheduling
